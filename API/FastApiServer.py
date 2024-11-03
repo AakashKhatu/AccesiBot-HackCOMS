@@ -1,19 +1,13 @@
-# %%
 from together import Together
 
 client = Together()
-
-# %%
 from fastapi import FastAPI
 from pydantic import BaseModel
 from loguru import logger
 from fastapi.middleware.cors import CORSMiddleware
 import json
+from notebooks.FinalChain import main
 
-# %%
-from FinalChain import main
-
-# %%
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -28,7 +22,7 @@ class ImageURL(BaseModel):
     url: str
 
 
-# sampleresponse = ""
+sampleresponse = ""
 
 
 @app.post("/analyze")
@@ -40,14 +34,17 @@ def index(request: ImageURL):
     return {"analysis": sampleresponse}
 
 
-# %%
+@app.post("/analyze_test")
+def index(request: ImageURL):
+    global sampleresponse
+    return {"analysis": sampleresponse}
+
+
 from pyngrok import ngrok
 
 ngrok_tunnel = ngrok.connect(8000)
 
-ngrok_tunnel
-
-# %%
+print(ngrok_tunnel)
 import nest_asyncio
 import uvicorn
 

@@ -381,8 +381,8 @@ def main(image_url):
     accessibility_chain = create_accessibility_chain()
 
     # Load contexts
-    color_context = load_context("knowledgebase\\coloring_for_colorblindness.txt")
-    font_context = load_context("knowledgebase\\font_for_vision.txt")
+    color_context = load_context("..\\knowledgebase\\coloring_for_colorblindness.txt")
+    font_context = load_context("..\\knowledgebase\\font_for_vision.txt")
 
     # Image URL
     # image_url = "https://cdn.discordapp.com/attachments/699317920022397019/1302381353504997428/Summer-Flyer-and-Poster.png"
