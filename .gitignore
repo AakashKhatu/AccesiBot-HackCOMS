@@ -1,2 +1,2 @@
-AdobeExpressAddOn\node_modules
+AdobeExpressAddOn\node_modules\*
 API\.env

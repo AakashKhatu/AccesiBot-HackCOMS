@@ -1,0 +1,36 @@
+.editorconfig
+.idea
+.DS_Store
+.vscode/*
+
+# npm yarn
+node_modules
+dist
+package.lock
+package-lock.json
+yarn-error.log
+.pnp.*
+.yarn/*
+*.zip
+
+# keep in repo
+!.gitignore
+!.yarn.lock
+!.yarnrc.yml
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# gatsby files
+.env
+.cache
+public
+
+# cypress
+cypress/videos
+cypress/screenshots
+
+# lerna
+lerna-debug.log

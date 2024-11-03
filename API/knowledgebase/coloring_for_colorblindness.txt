@@ -1,0 +1,82 @@
+Coloring for Colorblindness
+We see colors differently
+About 1 in 20 people are colorblind in some way. This means that one or more of the types of cone cells in their eyes — the cells we use to detect color — does not work normally. Because of this, a person who is colorblind sees a reduced color space; two colors which appear distinct to a person with normal color vision may appear to be the same to a person who is colorblind. This phenomenon is not random. Mathematically, there are lines through color space — called "confusion lines" — such that every color on a confusion line appears the same to a person who is colorblind as every other color on that same confusion line.
+
+This means that we can, to some degree, simulate colorblindness. By mathematically replicating the confusion line phenomenon, we can replace the colors in a picture so that if two of the original colors are on the same confusion line, they each get replaced by the same new color. If we do this the right way, a person with normal color vision can experience something like colorblindness.
+
+This website is for people with normal or nearly normal color vision. The purpose of this website is to simulate for you what your chosen color palette looks like to viewers who are colorblind. The colors in the leftmost column are the "true" colors; these are displayed in the remaining three columns the way that a person with protanopia, deuteranopia, or tritanopia would see them, respectively.
+
+Color Palette
+True
+Prot.
+Deut.
+Trit.
+#D81B60
+hex
+
+
+
+Click on one of the true colors to view or change it using the color picker. Click the  button to remove a selected color from the color palette. Click the  button to add a new color to the color palette. Click the  button to reset all of the colors to my defaults. Your color palette is encoded in the URL for this page while you work, so you can save or share a color palette by saving the URL when you are finished. For example, here are links to the IBM design library "color blind safe" color palette and to the "conservative 7-color palette adapted for color blindness" from a Wong 2011 article in Nature.
+
+There's more
+There are other types of colorblindness and color vision anomaly than the three types mentioned above. I recommend looking at the Wikipedia entry on the subject for more information. The most common type of color vision anomaly is deuteranomaly, which involves reduced sensitivity — but not blindness — to the green region of the spectrum. Deuteranomaly affects 1 in every 16 or 17 men and 1 in every 250 women. You can see a simulation of deuteranomalous vision below.
+
+True
+Dtnm.
+The colorblindness simulations you see in the tool above are produced using state-of-the-art calculations. But while these calculations are widely used and broadly useful, the confusion lines used are imperfect and more study is required — especially regarding the rarer types of colorblindness — in order to say with certainty how exactly these simulations mirror the color vision of each person with colorblindness.
+
+Red and green
+The three types of cone cell in your eye are each responsible for detecting a different primary color: red, green, and blue. Because anomalies in these cells interfere with a person's ability to see these colors normally, it is a bad idea to use a color palette of red, green, and blue. In particular, you should avoid the common practice of using red and green as contrasting colors. See why for yourself.
+
+True
+Prot.
+Deut.
+Most people who are colorblind have some form of red-green colorblindness, such as deuteranomaly, deuteranopia, or protanopia. To a person with one of these forms of colorblindness, it can difficult or impossible to distinguish whether a given color is red or green, and shades of red and green may have very low contrast. Instead of using a color palette of red and green, consider using a similar magenta and green color palette instead.
+
+True
+Prot.
+Deut.
+Another common practice is to use red to highlight text. Again, this will not work well for some of your readers. People who are red-green colorblind will see a lower contrast between red text and the neutral colors which surround it.
+
+Accessible palettes
+So what colors should you use? The colorpicker tool above is intended to give the freedom to choose your own colors while making sure that your color palette is accessible. But to get you started, here are some ideas. Here are 8 pairs of contrasting colors which maintain their contrast for people who are colorblind. Click on any of them to load it into the color palette selection tool above.
+
+HEX #FFC20A
+R 255  G 194  B 10
+HEX #0C7BDC
+R 12  G 123  B 220
+HEX #994F00
+R 153  G 79  B 0
+HEX #006CD1
+R 0  G 108  B 209
+HEX #E1BE6A
+R 225  G 190  B 106
+HEX #40B0A6
+R 64  G 176  B 166
+HEX #E66100
+R 230  G 97  B 0
+HEX #5D3A9B
+R 93  G 58  B 155
+HEX #1AFF1A
+R 26  G 255  B 26
+HEX #4B0092
+R 75  G 0  B 146
+HEX #FEFE62
+R 254  G 254  B 98
+HEX #D35FB7
+R 211  G 95  B 183
+HEX #005AB5
+R 0  G 90  B 181
+HEX #DC3220
+R 220  G 50  B 32
+HEX #1A85FF
+R 26  G 133  B 255
+HEX #D41159
+R 212  G 17  B 89
+A number of color palettes have been developed with the intention of being accessible to people who are colorblind. Three of them appear below, from the IBM Design Library, Bang Wong, and Paul Tol respectively. Click on any of them to load it into the color palette selection tool above.
+
+IBM
+Wong
+Tol
+Beyond colors
+It is a good practice to, where possible, avoid conveying information purely through color. You should always consider adding other ways to convey the same information besides just color. For example, you might use text, symbols, or patterns. In a bar chart with bars of different colors, consider also giving the bars different patterns; perhaps bars of one color could also be dotted in black, while bars of another color could be overlaid with a crosshatch pattern. If you are using color to emphasize text, consider also using italics or boldface or some other form of emphasis as well.

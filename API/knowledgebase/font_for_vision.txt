@@ -1,0 +1,15 @@
+Guidelines for Creating Accessible Printed Posters by checking font styles
+
+- Is the font choice legible enough? (Font type)
+  o Use non-serif (san-serif) fonts (University of Edenburgh, 2005).
+  o Serif means a small decorative line added as embellishment to the
+  basic form or main strokes of an alphabetical letter. Typefaces are
+  often described as being serif or sans serif (without serifs). The most
+  common serif typeface is Times Roman. A common sans serif
+  typeface is Helvetica. Serif fonts can be more difficult to read,
+  particularly the more decorative, hand written, and italicized fonts
+
+
+Figure 2: Example serif and sans serif font.
+Notice the sans serif Arial font does not have decorative tails at the end of
+character strokes unlike the Harrington font.

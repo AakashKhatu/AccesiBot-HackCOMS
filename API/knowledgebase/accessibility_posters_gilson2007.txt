@@ -1,0 +1,220 @@
+# Guidelines for
+
+# Creating Accessible
+
+# Printed Posters
+
+## Stephen F. Gilson, Ph.D.
+
+## Robert M. Kitchin Jr., MSW
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 2 of 11
+
+Creating accessible posters provides all session participants with greater access
+to poster information. Designing posters to provide greater access minimizes the
+exclusion of participants from the benefits of poster sessions.
+
+Following are guidelines for creating the most accessible poster presentations
+possible, thereby increasing the usefulness of the information being presented
+for all session participants. There are no absolute ideals for accessibility that will
+provide access to all people. However, by following these guidelines, the access
+needs of session participants are less likely to be needlessly overlooked.
+
+The following pages will cover:
+
+1. Using Accessible Text
+2. Using Images/Graphics Without Losing Access
+3. Typical Poster Sizes and Use of Space
+4. Organizing Information
+5. Providing Multiple Formats
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 3 of 11
+
+### Using Accessible Text
+
+- Is poster text legible from a distance of 3 to 6 feet? (Font size)
+  o Title: Ideal is 158-point font (1.5 inches). Use at least 72 point font or
+  larger for poster titles (The title should be viewable from 10 to 15 feet
+  away to catch the attention of the reader (Conner, ND)).
+  o Section Title: Ideal is 56-point font (.54 inches). Use at least 46 to 56-
+  point font for section titles (Texas Tech University, 2007).
+  o Block Text/Body: Ideal is 36-point font (.34 inches). At least 24-
+  point font for body text.
+  o Sizes may vary depending on the viewing distance and amount of text
+  to be included (Texas Tech University, 2007).
+
+Figure 1: Example poster text.
+Examples in actual size are given for 158-point font for a poster title,
+56-point font for a section title (heading), and 36-point for body (block) text.
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 4 of 11
+
+- Is the font choice legible enough? (Font type)
+  o Use non-serif (san-serif) fonts (University of Edenburgh, 2005).
+  o Serif means a small decorative line added as embellishment to the
+  basic form or main strokes of an alphabetical letter. Typefaces are
+  often described as being serif or sans serif (without serifs). The most
+  common serif typeface is Times Roman. A common sans serif
+  typeface is Helvetica. Serif fonts can be more difficult to read,
+  particularly the more decorative, hand written, and italicized fonts
+  (Wikipedia, June, 2007; Shaw, May, 2007).
+  o Common sans serif fonts (Shaw, May, 2007):
+   Helvetica
+   Veranda
+   Microsoft sans serif
+
+####  For a list of fonts and explanations see:
+
+#### http://www.codestyle.org/css/font-family/sampler-
+
+#### SansSerif.shtml
+
+Figure 2: Example serif and sans serif font.
+Notice the sans serif Arial font does not have decorative tails at the end of
+character strokes unlike the Harrington font.
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 5 of 11
+
+- Is the font color contrasted enough with the background (Lighthouse
+  International, 2007)?
+  o Black text with white back ground is the most legible with printed
+  material.
+  o Still, you may want to use different colors. If this is important to your
+  design for aesthetic or other reasons it is better to use combinations
+  different from black text on white background only for larger or
+  highlighted text, such as headlines and titles.
+
+Figure 3: Contrast example for a heading.
+Notice the white text on solid color background.
+
+- Is the line spacing too crowded?
+   “Leading” refers to the amount of added vertical spacing between lines
+  of type. In this text the leading or line spacing is 1.5. Using between
+  1.2 and 2.0 line-spacing allows the reader greater ease in moving from
+  line to line (Wikipedia, 2007). - Tracking is the space between characters. If your processor
+  allows for letter-spacing adjustments +3 is adequate. - You can increase tracking for headlines but you should not use
+  less then +3 for tracking anywhere.
+- Are there too many lines per text block? (See Figure 4)
+  o Text block: Could be a standard 11 by 8.5 piece of paper, which will
+  hold about 100 words or 19 lines of text with
+   Font size 24
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 6 of 11
+
+```
+ Lines-pacing 1.
+o A text block could also be the text associated with a particular heading
+arrange in way other than a rectangular block.
+```
+
+Figure 4: Sample block text using different shaped areas for text (i.e.
+rectangle and oval).
+
+Notice that lines of text are spaced using 1.5 line-spacing and the space
+between text characters is spaced to increase access. Arial font is used in
+the figure below.
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 7 of 11
+
+### Using Images/graphics without losing access
+
+o It is not necessary to completely avoid using images. Instead, use them
+creatively and ensure that all elements work together to draw the audience to
+understand the message.
+o Do all images used to communicate ideas have sufficient text labels and text
+captions (American Society of Primatologists [ASP], 2002)?
+ Captions and/or alternative text allow the audience to access more
+precisely what the image is intended to communicate.
+o Place images/graphics with consideration to where in the sequence of text
+they belong (ASP, 2002).
+o Do not place text over images (Lighthouse International, 2007).
+o Are image/graphic titles appropriately referred to in the text (ASP, 2002)?
+o Are the uses of any charts (pie, line, scatter, histograms, etc.) used
+appropriately and with clear textual explanations of the data?
+o Is the resolution of the images correct for large printing? Using .gif, .jpeg,
+.bmp, .eps, .png, etc. files that are not rendered at a sufficient resolution will
+cause them to blur and be of poor visual quality in your printed poster. As a
+general rule, use a minimum 300 dots per inch (dpi) when saving images
+created in programs such as Adobe™ Illustrator™, InDesign™, or
+Photoshop™. Avoid copying and pasting images from the web that are below
+250kb for best results (TTU, 2007).
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 8 of 11
+
+### Typical Poster Sizes and Use of Space
+
+- Typical poster sizes are:
+  o 40” x Up to 56”
+  o 34” x Up to 56”
+  o 22” x Up to 56”
+- Know what size is required or available per the conference poster guidelines.
+- Be wary of crowding a small poster. If possible, have a larger poster and
+  utilize more white space to improve access
+
+Figure 5: Crowed white space.
+Notice the block text using insufficient line spacing and under-utilized use
+of white space.
+
+Figure 6: Optimized white space.
+Notice increased line spacing and efficient use of white space.
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 9 of 11
+
+### Organization of information
+
+- Location of the poster title should generally be across the top of the page and
+  displayed prominently.
+- Headings and sub headings should be displayed in relationship to the
+  body/block text they lead.
+- An introduction to the poster should be clear, engage the audience, and
+  inform them of the power message to take from the poster.
+- Readers should be logically led in the correct direction from heading to
+  heading by a clear narrative and attractive while logical design of the poster.
+  (See figure 7).
+
+Figure 7: A Poster Layout
+Notice that the organization flows from the title spanning the top of the
+page to the left column and then reads from the top of each column to the
+bottom progressing from left to right. Other types of organization are
+useful as well, such as progressively numbering each heading.
+
+---
+
+Guidelines for Creating Accessible Printed Posters Page 10 of 11
+
+### Providing multiple formats
+
+Providing multiple formats increases the options for how to access the
+poster. Increasing options for access is good design (Slatin & Rush, 2002).
+
+- Poster content should also be provided in the following formats:
+  o A data version that allows for the easy alteration of font, type size, and
+  interpretation by a screen reader, such as:
+   Microsoft Word™ .doc/.rtf.
+   Html (Webpage)
+  o Data versions that can be provided via the web, email, or CD. CD’s
+  can provide the most immediate access to the poster content and be
+  handed out during the poster session with printed handouts.
+  o Avoid handouts of power point slides. Text is often extremely reduced,
+  rendering it inaccessible. Use standard letter (8.5 inch by 11 inch) size
+  paper with 12-point sans serif fonts.
+  o Provide a large print hardcopy. Large print for standard letter pages is
+  at least 18-point text.
+
+---
