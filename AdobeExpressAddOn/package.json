@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@azure/storage-blob": "^12.25.0",
-    "lit": "^3.2.1"
-  }
-}
