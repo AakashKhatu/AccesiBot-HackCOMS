@@ -1,0 +1,26 @@
+{
+    "testId": "AccessiBot",
+    "name": "AccessiBot",
+    "version": "1.0.4",
+    "manifestVersion": 2,
+     "icon": "AccessiBotIcon.png",
+    "requirements": {
+        "apps": [
+            {
+                "name": "Express",
+                "apiVersion": 1
+            }
+        ]
+    
+    },
+    "entryPoints": [
+        {
+            "type": "panel",
+            "id": "panel1",
+            "main": "index.html",
+            "permissions": {
+                "sandbox": ["allow-popups", "allow-presentation", "allow-downloads"]
+            }
+        }
+    ]
+}

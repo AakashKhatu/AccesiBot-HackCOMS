@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+
+
+    <style>
+       * {
+        font-family: 'Poppins', sans-serif;
+      }
+      /* Keyframes for the rotating gradient border */
+      @keyframes rotate-border {
+        0% {
+          border-image-source: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+        }
+        100% {
+          border-image-source: linear-gradient(450deg, red, orange, yellow, green, blue, indigo, violet);
+        }
+      }
+
+      /* Style for the button with rotating gradient animation */
+      #preview-button {
+        display: block;
+        border-radius: 50px;
+        background: transparent;
+        color: rgb(10, 10, 10);
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        border: 2px solid;
+        border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
+        animation: rotate-border 5s linear infinite;
+      }
+
+      /* Style when button is disabled */
+      #preview-button:disabled {
+        color: #aaa;
+        border-image: none;
+        background-color: #ddd;
+        border: 2px solid #ccc;
+        cursor: not-allowed;
+        animation: none; /* Stop the gradient animation */
+      }
+
+      /* Style for the loading bar */
+      #loading-bar {
+        width: 100%;
+        height: 10px;
+        background-color: #f3f3f3;
+        margin-top: 20px;
+        overflow: hidden;
+        display: none; /* Hidden by default */
+        position: relative;
+      }
+
+      /* Inner loading bar animation */
+      #loading-bar-inner {
+        width: 0;
+        height: 100%;
+        background-color: #4caf50;
+        /* animation: loading-animation 2s linear infinite; */
+        animation: loading-animation 20s linear forwards;
+
+      }
+
+      /* Keyframes for the loading bar animation */
+      @keyframes loading-animation {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      /* Additional styles for aligning checkboxes and text */
+  ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+  }
+
+  li {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  li h3, li p {
+    margin: 0; /* Remove default margin */
+  }
+
+  li div {
+    margin-left: 10px; /* Space between checkbox and text */
+  }
+    </style>
+  </head>
+  <body>
+
+    <p style="font-size: 14px; margin-bottom: 10px; text-align: left;">
+      Good design opens doors for all—empowering people with dyslexia, low vision, color blindness, ADHD, epilepsy, autism, and beyond.
+    </p>
+
+    <sp-button id="preview-button" treatment="fill" variant="secondary">
+      Analyze
+    </sp-button>
+
+    <!-- Loading bar container -->
+    <div id="loading-bar">
+      <div id="loading-bar-inner"></div>
+    </div>
+
+
+
+
+    <div
+      style="
+        height: 275px;
+        width: 275px;
+        border: 1px solid;
+        border-color: lightgray;
+        text-align: center;
+        overflow-y: scroll;
+        display: block;
+        margin-top: 10%;
+      "
+      id="square"
+    >
+      <sp-field-label
+        style="padding-top: 45%; padding-bottom: 50%; display: block"
+        id="prev"
+        size="l"
+        >PREVIEW</sp-field-label
+      >
+
+    <!-- </div> -->
+
+    </div>
+
+    <p id="scroll-target" style="font-size: 14px; margin-bottom: 10px; text-align: left;">
+      Adapt these changes to make your design <strong>accessible</strong> to all.
+    </p>
+
+    <!-- Container for displaying analysis response -->
+    <div id="analysis-results" style="margin-top: 20px; padding: 10px; border: 1px solid lightgray;">
+    </div>
+
+    <script type="module" defer>
+      import AddOnSdk from "https://new.express.adobe.com/static/add-on-sdk/sdk.js";
+      try {
+        await AddOnSdk.ready;
+      } catch (e) {
+        console.error("SDK init failed:", e);
+      }
+
+      document.getElementById("preview-button").addEventListener("click", previewButtonClick);
+
+async function previewButtonClick() {
+    const previewButton = document.getElementById("preview-button");
+    previewButton.disabled = true; // Disable the button immediately after clicking
+
+    document.getElementById("prev").style.display = "block";
+
+    // Show loading bar
+    document.getElementById("loading-bar").style.display = "block";
+
+    const renditionOptions = {
+        range: "currentPage",
+        format: "image/png",
+    };
+
+    try {
+        const response = await AddOnSdk.app.document.createRenditions(renditionOptions);
+
+        document.getElementById("prev").style.display = "none";
+        if (response && response.length > 0) {
+            if (document.getElementById("preview-image")) {
+                document.getElementById("preview-image").remove();
+            }
+            const img = document.createElement("img");
+            img.id = "preview-image";
+            img.src = URL.createObjectURL(response[0].blob);
+            img.style.maxWidth = "100%";
+            img.style.maxHeight = "100%";
+
+            const squareDiv = document.getElementById("square");
+            squareDiv.appendChild(img);
+
+            const blob = response[0].blob;
+
+            // 1. Upload to Azure Blob Storage
+            const azureStorageAccount = "gk4413blobstorage";
+            const containerName = "images";
+            const sasToken = "?sv=2023-01-03&ss=btqf&srt=sco&st=2024-11-03T03%3A04%3A31Z&se=2024-11-19T04%3A04%3A00Z&sp=rwl&sig=GifJLs7xUBpPEHcDXuX9Zn%2Fy8nyKgmDPLqPs0WgpPZ4%3D";
+            const blobName = `preview-${Date.now()}.png`;
+            const azureUrl = `https://${azureStorageAccount}.blob.core.windows.net/${containerName}/${blobName}${sasToken}`;
+
+            try {
+                const uploadResponse = await fetch(azureUrl, {
+                    method: "PUT",
+                    headers: {
+                        "x-ms-blob-type": "BlockBlob",
+                    },
+                    body: blob,
+                });
+
+                if (uploadResponse.ok) {
+                    const blobUrl = `https://${azureStorageAccount}.blob.core.windows.net/${containerName}/${blobName}`;
+                    const apiEndpoint = "https://eed6-68-180-87-191.ngrok-free.app/analyze";
+                    const analysisResponse = await fetch(apiEndpoint, {
+                        method: "POST",
+                        headers: {
+                            'Accept': 'application/json',
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ url: blobUrl }),
+                    });
+
+                    const analysisText = await analysisResponse.text();
+                    displayAnalysisResults(analysisText); // Display the results and then re-enable the button
+                } else {
+                    console.error("Azure upload failed:", uploadResponse.statusText);
+                }
+            } catch (err) {
+                console.error("Error during Azure upload:", err);
+            }
+        }
+    } catch (error) {
+        console.error("Error in previewButtonClick:", error);
+    } finally {
+        // Re-enable the button in the displayAnalysisResults function
+    }
+}
+
+function displayAnalysisResults(analysisText) {
+    const analysisData = JSON.parse(JSON.parse(analysisText).analysis);
+    const analysisContainer = document.getElementById("analysis-results");
+    analysisContainer.innerHTML = "";
+
+    const ul = document.createElement("ul");
+
+    Object.keys(analysisData).forEach((key, index) => {
+      const issue = analysisData[key];
+      const listItem = document.createElement("li");
+
+      // Create checkbox
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+
+      // Create div to hold text content
+      const textContent = document.createElement("div");
+
+      if (issue.Title) {
+        const title = document.createElement("h3");
+        title.textContent = `${index + 1}. ${issue.Title}`;
+        textContent.appendChild(title);
+      }
+
+      if (issue.Description) {
+        const description = document.createElement("p");
+        description.innerHTML = `<strong>Description:</strong> ${issue.Description}`;
+        textContent.appendChild(description);
+      }
+
+      if (issue.Suggestion) {
+        const suggestion = document.createElement("p");
+        suggestion.innerHTML = `<strong>Suggestion:</strong> ${issue.Suggestion}`;
+        textContent.appendChild(suggestion);
+      }
+
+      if (issue.Importance_score) {
+        const importance = document.createElement("p");
+        importance.innerHTML = `<strong>Importance Score:</strong> ${issue.Importance_score}`;
+        textContent.appendChild(importance);
+      }
+
+      // Append checkbox and text content to list item
+      listItem.appendChild(checkbox);
+      listItem.appendChild(textContent);
+      ul.appendChild(listItem);
+    });
+
+    analysisContainer.appendChild(ul);
+
+    // analysisContainer.scrollIntoView({ behavior: "smooth" });
+
+    document.getElementById("scroll-target").scrollIntoView({ behavior: "smooth" });
+
+    document.getElementById("preview-button").disabled = false; // Re-enable button after analysis is displayed
+    document.getElementById("loading-bar").style.display = "none"; // Hide loading bar
+}
+
+
+    </script>
+  </body>
+</html>
