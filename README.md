@@ -1,7 +1,7 @@
 # 🎨 AccessiBot
 ### An AI-Powered Adobe Express Add-On for Inclusive Design
 
-# 🔗 [Devpost](https://devpost.com/software/accessibot)
+## 🔗 [Devpost](https://devpost.com/software/accessibot)
 
 ## 🏆 Awards
 - **[MLH] Most Creative Adobe Express Add-On** - HackCOMS @ RIT - Nov 2024
