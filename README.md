@@ -75,7 +75,11 @@ cd frontend
 npm install
 ```
 
-3. npm build and upload to Adobe Express
+3. Build the project
+```bash
+npm build
+```
+ and follow steps 5 and 6 from below.
 
 OR
 
