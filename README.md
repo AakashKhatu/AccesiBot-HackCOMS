@@ -64,7 +64,7 @@ cp .env.example .env
 python fastApiServer.py
 ```
 
-### Adobe Express Add-On Setup
+### Build your own Adobe Express Add-On
 1. Navigate to the add-on directory
 ```bash
 cd frontend
@@ -75,11 +75,35 @@ cd frontend
 npm install
 ```
 
-3. Configure the add-on
-- Open Adobe Express Add-on Developer Console
-- Create a new project
-- Upload the add-on files
-- Enable debug mode for testing
+3. npm build and upload to Adobe Express
+
+OR
+
+### Use pre-built release and Test AccessiBot:
+   
+1. **Download dist.zip from releases**
+
+2. **Go to Adobe Express**  
+   Open Adobe Express in your browser.
+
+3. **Enable Add-On Development**  
+   - Navigate to **Profile -> Settings**.  
+   - Enable **Add-On development**.
+
+4. **Create a New Add-On**  
+   - In the Nav bar, click **Add-Ons -> Your Add-Ons -> Manage Add-Ons -> Create new add-on**.  
+   - Type the name **AccessiBot**.  
+   - Create a private link.
+
+5. **Upload Add-On Package**  
+   - Add `dist.zip` as the add-on package.  
+   - Copy the generated link and open it in a new tab.
+
+6. **Test AccessiBot**  
+   - Click **Add**.  
+   - Select **Create/import your design**.  
+   - Test and play with AccessiBot.
+
 
 ## 💡 How It Works
 1. User clicks the "Analyze" button in Adobe Express
